@@ -1,10 +1,11 @@
 import React from "react"
+import Layout from "../components/layout-default"
 
 const IndexPage = () => (
-  <div>
+  <Layout>
     <h1>test</h1>
     content
-  </div>
+  </Layout>
 )
 
 export default IndexPage
