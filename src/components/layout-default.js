@@ -1,42 +1,37 @@
-import React, { Fragment } from "react"
+import React from "react"
 import styled, { createGlobalStyle, ThemeProvider } from "styled-components"
 import reset from "styled-reset-advanced"
 // import theme from "../helpers/theme"
 // import "../helpers/prism.css"
-// import Header from "../components/header"
-// import Content from "../components/content"
-// import Footer from "../components/footer"
+import Header from "../components/header"
+import Content from "../components/content"
+import Footer from "../components/footer"
 
 const BaseStyles = createGlobalStyle`
   ${reset}
-  /* html, 
-  body,
-  #___gatsby,
-  #gatsby-focus-wrapper {
-    height: 100%;
-  } */
+  body {
+    line-height: initial;
+  }
 `
 
 const Wrapper = styled.div`
-  /* height: 100%;
+  min-height: 100vh;
   display: grid;
-  grid-template-rows: auto 1fr; */
+  grid-template-rows: auto 1fr auto;
   font-family: sans-serif;
   letter-spacing: 0.0063rem;
 `
 
 const Layout = ({ children }) => {
   return (
-    <Fragment>
+    <ThemeProvider theme={{ color: "white" }}>
       <BaseStyles />
-      <ThemeProvider theme={{ color: "white" }}>
-        <Wrapper>
-          <div>header</div>
-          <div>{children}</div>
-          <div>footer</div>
-        </Wrapper>
-      </ThemeProvider>
-    </Fragment>
+      <Wrapper>
+        <Header />
+        <Content>{children}</Content>
+        <Footer />
+      </Wrapper>
+    </ThemeProvider>
   )
 }
 
