@@ -12,16 +12,8 @@ const Wrapper = styled.section`
   background: ${props => props.theme.backgroundContent};
 `
 const Article = styled.article`
-  margin: 3.58rem 0.58rem 0.93rem;
+  margin: 3.53rem 0.58rem 0.93rem;
   line-height: 1.4;
-
-  /* @media screen and (min-width: 576px) {
-    column-count: 2;
-  }
-
-  @media screen and (min-width: 992px) {
-    column-count: 3;
-  } */
 
   h1 {
     font-size: ${props => props.theme.fontH1};
