@@ -1,7 +1,7 @@
 import React from "react"
 import styled, { createGlobalStyle, ThemeProvider } from "styled-components"
 import reset from "styled-reset-advanced"
-// import theme from "../helpers/theme"
+import theme from "../helpers/theme"
 // import "../helpers/prism.css"
 import Header from "../components/header"
 import Content from "../components/content"
@@ -17,14 +17,14 @@ const BaseStyles = createGlobalStyle`
 const Wrapper = styled.div`
   min-height: 100vh;
   display: grid;
-  grid-template-rows: auto 1fr auto;
-  font-family: sans-serif;
-  letter-spacing: 0.0063rem;
+  grid-template-rows: 1fr auto;
+  font-family: ${theme.common.font};
+  letter-spacing: ${theme.common.letterSpacing};
 `
 
 const Layout = ({ children }) => {
   return (
-    <ThemeProvider theme={{ color: "white" }}>
+    <ThemeProvider theme={Object.assign({}, theme.common, theme.light)}>
       <BaseStyles />
       <Wrapper>
         <Header />

@@ -2,7 +2,7 @@ import React from "react"
 import styled from "styled-components"
 
 const Wrapper = styled.footer`
-  /* display: grid;
+  display: grid;
   grid-template-columns: auto;
   grid-gap: ${props => props.theme.padding};
   color: ${props => props.theme.colorLight};
@@ -10,7 +10,7 @@ const Wrapper = styled.footer`
   background: ${props => props.theme.backgroundFooter};
   box-shadow: ${props => props.theme.shadowUp};
   font-size: ${props => props.theme.fontSmall};
-  text-align: center; */
+  text-align: center;
 `
 
 const Footer = () => (
