@@ -15,6 +15,10 @@ const Article = styled.article`
   margin: 3.53rem 0.58rem 0.93rem;
   line-height: 1.4;
 
+  p {
+    margin: 0.75rem 0;
+  }
+
   h1 {
     font-size: ${props => props.theme.fontH1};
     font-weight: bold;
