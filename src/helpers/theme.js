@@ -29,6 +29,8 @@ const theme = {
     colorDark: "#16161d",
     colorLight: "#16161d",
     backgroundHeader: "#f7f7f7",
+    backgroundHeader:
+      "linear-gradient(80deg,#f7f7f7 23vw,rgba(0,0,0,0) 86.5vw)",
     backgroundContent: "#f7f7f7",
     backgroundFooter: "#f7f7f7",
   },

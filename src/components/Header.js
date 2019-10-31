@@ -5,18 +5,20 @@ import styled from "styled-components"
 const Wrapper = styled.header`
   display: grid;
   position: fixed;
-  grid-template-columns: 1fr auto;
+  grid-template-columns: 1fr;
   grid-gap: ${props => props.theme.padding};
   color: ${props => props.theme.colorLight};
   padding: ${props => props.theme.padding};
   background: ${props => props.theme.backgroundHeader};
-  box-shadow: ${props => props.theme.shadowDown};
   width: 100%;
 `
 
 const Brand = styled.div`
-  font-size: 1.25rem;
+  font-size: 1.5rem;
+  font-weight: lighter;
   margin-top: 0.22rem;
+  letter-spacing: -1.5px;
+  font-kerning: none;
 `
 
 const Header = () => (

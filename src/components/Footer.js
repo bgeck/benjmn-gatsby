@@ -8,9 +8,8 @@ const Wrapper = styled.footer`
   color: ${props => props.theme.colorLight};
   padding: ${props => props.theme.padding};
   background: ${props => props.theme.backgroundFooter};
-  box-shadow: ${props => props.theme.shadowUp};
   font-size: ${props => props.theme.fontSmall};
-  text-align: center;
+  text-align: right;
 `
 
 const Footer = () => (

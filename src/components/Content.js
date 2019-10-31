@@ -17,6 +17,9 @@ const Article = styled.article`
 
   h1 {
     font-size: ${props => props.theme.fontH1};
+    font-weight: bold;
+    letter-spacing: -1.2px;
+    font-kerning: none;
   }
 
   h2 {
