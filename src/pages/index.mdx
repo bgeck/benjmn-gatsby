@@ -11,28 +11,33 @@ import { graphql } from "gatsby"
 
 export const posts = graphql`
   query Posts {
-    allSitePage(
-      filter: { context: { frontmatter: { type: { eq: "post" } } } }
-    ) {
+    allMdx(filter: { frontmatter: { type: { eq: "post" } } }) {
       nodes {
-        path
-        context {
-          frontmatter {
-            title
-            date
-          }
+        excerpt
+        timeToRead
+        wordCount {
+          paragraphs
+          sentences
+          words
         }
+        frontmatter {
+          date
+          title
+          path
+          type
+        }
+        tableOfContents
       }
     }
   }
 `
 
 <div>
-  {props.data.allSitePage.nodes.map(({ path, context }) => (
-    <div key={path}>
-      <a href={path}>{path}</a>
-      <span>{context.frontmatter.title}</span>
-      <span>{context.frontmatter.date}</span>
+  {props.data.allMdx.nodes.map(({ frontmatter }) => (
+    <div key={frontmatter.title}>
+      <a href={frontmatter.path}>{frontmatter.path}</a>
+      <span>{frontmatter.title}</span>
+      <span>{frontmatter.date}</span>
     </div>
   ))}
 </div>
