@@ -1,11 +1,41 @@
 ---
-title: Home
+type: page
+title: "Home"
 date: 11-3-2019
 ---
 
 import Seo from "../components/Seo"
+import { graphql } from "gatsby"
 
 <Seo title={props.pageContext.frontmatter.title} />
+
+export const posts = graphql`
+  query Posts {
+    allSitePage(
+      filter: { context: { frontmatter: { type: { eq: "post" } } } }
+    ) {
+      nodes {
+        path
+        context {
+          frontmatter {
+            title
+            date
+          }
+        }
+      }
+    }
+  }
+`
+
+<div>
+  {props.data.allSitePage.nodes.map(({ path, context }) => (
+    <div key={path}>
+      <a href={path}>{path}</a>
+      <span>{context.frontmatter.title}</span>
+      <span>{context.frontmatter.date}</span>
+    </div>
+  ))}
+</div>
 
 # Test
 
