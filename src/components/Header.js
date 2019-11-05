@@ -10,10 +10,10 @@ const Wrapper = styled.header`
   align-items: baseline;
   grid-gap: 1.06rem;
   padding: ${props => props.theme.padding};
-  color: ${props => props.theme.colorLight};
+  color: ${props => props.theme.colorDark};
   background: ${props => props.theme.backgroundHeader};
   width: 100%;
-  backdrop-filter: blur(1.25px);
+  backdrop-filter: blur(10.25px);
 `
 
 const Brand = styled.div`

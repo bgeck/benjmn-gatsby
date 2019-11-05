@@ -32,7 +32,7 @@ const theme = {
     background:
       "linear-gradient(11deg,#f7f7f7 80vw,#5a30304d 100vw),linear-gradient(-10deg,#7c4480 84vw,#3bb7ff 90vw)",
     backgroundHeader:
-      "linear-gradient(80deg, #16161d 23vw, rgba(0,0,0,0) 86.5vw)",
+      "linear-gradient(80deg,#f6ffe06b 13vw,rgba(0,0,0,0) 86.5vw)",
     backgroundContent: "transparent",
     backgroundFooter: "transparent",
   },
