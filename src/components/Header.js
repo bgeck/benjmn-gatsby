@@ -8,8 +8,8 @@ const Wrapper = styled.header`
   position: fixed;
   grid-template-columns: 1fr;
   grid-gap: ${props => props.theme.padding};
-  color: ${props => props.theme.colorLight};
   padding: ${props => props.theme.padding};
+  color: ${props => props.theme.colorDark};
   background: ${props => props.theme.backgroundHeader};
   width: 100%;
 `

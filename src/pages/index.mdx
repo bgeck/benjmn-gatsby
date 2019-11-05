@@ -4,42 +4,6 @@ title: "Home"
 date: 11-3-2019
 ---
 
-import { graphql } from "gatsby"
-
-export const posts = graphql`
-  query Posts {
-    allMdx(filter: { frontmatter: { type: { eq: "post" } } }) {
-      nodes {
-        excerpt
-        timeToRead
-        wordCount {
-          paragraphs
-          sentences
-          words
-        }
-        frontmatter {
-          date
-          title
-          path
-          type
-        }
-        tableOfContents
-      }
-    }
-  }
-`
-
-<div>
-  {props.data.allMdx.nodes.map(({ frontmatter, excerpt }) => (
-    <div key={frontmatter.title}>
-      <a href={frontmatter.path}>{frontmatter.path}</a>
-      <div>{excerpt}</div>
-      <span>{frontmatter.title}</span>
-      <span>{frontmatter.date}</span>
-    </div>
-  ))}
-</div>
-
 # Test
 
 A very small stage in a vast cosmic arena brain is the seed of

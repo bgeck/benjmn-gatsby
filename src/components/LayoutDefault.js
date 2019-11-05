@@ -1,18 +1,12 @@
 import React from "react"
-import styled, { createGlobalStyle, ThemeProvider } from "styled-components"
-import reset from "styled-reset-advanced"
+import styled, { ThemeProvider } from "styled-components"
 import theme from "../helpers/theme"
 import Header from "./Header"
+import PostList from "./PostList"
 import Content from "./Content"
 import Footer from "./Footer"
 import Seo from "./Seo"
-
-const BaseStyles = createGlobalStyle`
-  ${reset}
-  body {
-    line-height: initial;
-  }
-`
+import BaseStyles from "./BaseStyles"
 
 const Wrapper = styled.div`
   min-height: 100vh;
@@ -20,9 +14,11 @@ const Wrapper = styled.div`
   grid-template-rows: 1fr auto;
   font-family: ${theme.common.font};
   letter-spacing: ${theme.common.letterSpacing};
+  color: ${props => props.theme.colorDark};
+  background: ${props => props.theme.backgroundContent};
 `
 
-const Layout = ({ children, pageContext }) => {
+const LayoutDefault = ({ children, pageContext }) => {
   return (
     <ThemeProvider theme={Object.assign({}, theme.common, theme.light)}>
       <Seo title={pageContext.frontmatter.title} />
@@ -30,10 +26,11 @@ const Layout = ({ children, pageContext }) => {
       <Wrapper>
         <Header />
         <Content>{children}</Content>
+        <PostList />
         <Footer />
       </Wrapper>
     </ThemeProvider>
   )
 }
 
-export default Layout
+export default LayoutDefault
