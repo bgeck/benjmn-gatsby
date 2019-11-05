@@ -1,5 +1,6 @@
 import React from "react"
 import styled from "styled-components"
+import { Link } from "gatsby"
 // import Menu from "./menu"
 
 const Wrapper = styled.header`
@@ -23,7 +24,9 @@ const Brand = styled.div`
 
 const Header = () => (
   <Wrapper>
-    <Brand>Benjamin Geck</Brand>
+    <Link to={"/"}>
+      <Brand>Benjamin Geck</Brand>
+    </Link>
     {/* <Menu align="right" /> */}
   </Wrapper>
 )

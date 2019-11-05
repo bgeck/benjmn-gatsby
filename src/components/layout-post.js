@@ -3,9 +3,10 @@ import styled, { createGlobalStyle, ThemeProvider } from "styled-components"
 import reset from "styled-reset-advanced"
 import theme from "../helpers/theme"
 // import "../helpers/prism.css"
-import Header from "./header"
-import Content from "./content"
-import Footer from "./footer"
+import Header from "./Header"
+import Content from "./Content"
+import Footer from "./Footer"
+import Seo from "./Seo"
 
 const BaseStyles = createGlobalStyle`
   ${reset}
@@ -22,9 +23,10 @@ const Wrapper = styled.div`
   letter-spacing: ${theme.common.letterSpacing};
 `
 
-const Layout = ({ children }) => {
+const Layout = ({ children, pageContext }) => {
   return (
     <ThemeProvider theme={Object.assign({}, theme.common, theme.light)}>
+      <Seo title={pageContext.frontmatter.title} />
       <BaseStyles />
       <Wrapper>
         <Header />

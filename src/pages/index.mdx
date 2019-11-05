@@ -4,10 +4,7 @@ title: "Home"
 date: 11-3-2019
 ---
 
-import Seo from "../components/Seo"
 import { graphql } from "gatsby"
-
-<Seo title={props.pageContext.frontmatter.title} />
 
 export const posts = graphql`
   query Posts {
@@ -33,9 +30,10 @@ export const posts = graphql`
 `
 
 <div>
-  {props.data.allMdx.nodes.map(({ frontmatter }) => (
+  {props.data.allMdx.nodes.map(({ frontmatter, excerpt }) => (
     <div key={frontmatter.title}>
       <a href={frontmatter.path}>{frontmatter.path}</a>
+      <div>{excerpt}</div>
       <span>{frontmatter.title}</span>
       <span>{frontmatter.date}</span>
     </div>
