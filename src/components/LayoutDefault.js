@@ -2,12 +2,10 @@ import React from "react"
 import styled, { ThemeProvider } from "styled-components"
 import theme from "../helpers/theme"
 import Header from "./Header"
-import PostList from "./PostList"
 import Content from "./Content"
 import Footer from "./Footer"
 import Seo from "./Seo"
 import BaseStyles from "./BaseStyles"
-import Filters from "./Filters"
 
 const Wrapper = styled.div`
   min-height: 100vh;
@@ -23,11 +21,9 @@ const LayoutDefault = ({ children, pageContext }) => {
     <ThemeProvider theme={Object.assign({}, theme.common, theme.light)}>
       <Seo title={pageContext.frontmatter.title} />
       <BaseStyles />
-      <Filters />
       <Wrapper>
         <Header />
         <Content>{children}</Content>
-        <PostList />
         <Footer />
       </Wrapper>
     </ThemeProvider>

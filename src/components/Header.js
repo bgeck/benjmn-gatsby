@@ -6,8 +6,9 @@ import { Link } from "gatsby"
 const Wrapper = styled.header`
   display: grid;
   position: fixed;
-  grid-template-columns: 1fr;
-  grid-gap: ${props => props.theme.padding};
+  grid-template-columns: auto 1fr;
+  align-items: baseline;
+  grid-gap: 1.06rem;
   padding: ${props => props.theme.padding};
   color: ${props => props.theme.colorLight};
   background: ${props => props.theme.backgroundHeader};
@@ -23,11 +24,27 @@ const Brand = styled.div`
   font-kerning: none;
 `
 
+const Menu = styled.div`
+  letter-spacing: -0.75px;
+  font-weight: bolder;
+  font-size: 1.2rem;
+  font-kerning: none;
+
+  a + a {
+    margin-left: ${props => props.theme.padding};
+  }
+`
+
 const Header = () => (
   <Wrapper>
     <Link to={"/"}>
       <Brand>Benjamin Geck</Brand>
     </Link>
+
+    <Menu>
+      <Link to={"/posts"}>Posts</Link>
+      <Link to={"/"}>Contact</Link>
+    </Menu>
     {/* <Menu align="right" /> */}
   </Wrapper>
 )
