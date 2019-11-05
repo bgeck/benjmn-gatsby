@@ -5,8 +5,7 @@ import { useStaticQuery, graphql, Link } from "gatsby"
 const Wrapper = styled.div`
   display: grid;
   grid-gap: ${props => props.theme.padding};
-  padding: ${props => props.theme.padding};
-  margin: 0 0.58rem;
+  padding: 0 1.245rem;
   line-height: 1.4;
 `
 

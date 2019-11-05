@@ -14,7 +14,7 @@ const theme = {
     fontH2: "1.5rem",
     fontH3: "1.25rem",
     fontH4: "1rem",
-    fontSmall: "0.78rem",
+    fontSmall: "0.68rem",
   },
 
   dark: {

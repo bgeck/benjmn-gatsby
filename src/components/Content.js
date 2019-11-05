@@ -7,12 +7,11 @@ const Wrapper = styled.section`
   align-items: center;
   justify-content: center;
   grid-gap: ${props => props.theme.padding};
-  padding: ${props => props.theme.padding};
+  padding: 5.095rem 1.245rem 0.93rem;
   color: ${props => props.theme.colorDark};
   background: ${props => props.theme.backgroundContent};
 `
 const Article = styled.article`
-  margin: 3.53rem 0.58rem 0.93rem;
   line-height: 1.4;
 `
 

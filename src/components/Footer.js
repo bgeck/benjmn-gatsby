@@ -6,10 +6,16 @@ const Wrapper = styled.footer`
   grid-template-columns: auto;
   grid-gap: ${props => props.theme.padding};
   padding: ${props => props.theme.padding};
-  color: ${props => props.theme.colorDark};
+  color: #16161d59;
   background: ${props => props.theme.backgroundFooter};
   font-size: ${props => props.theme.fontSmall};
-  text-align: right;
+  text-align: center;
+  font-weight: lighter;
+  letter-spacing: -0.68px;
+
+  @media screen and (min-width: 576px) {
+    text-align: right;
+  }
 `
 
 const Footer = () => (
