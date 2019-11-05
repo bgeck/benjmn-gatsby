@@ -2,7 +2,7 @@ import React from "react"
 import PropTypes from "prop-types"
 import styled from "styled-components"
 import Highlight, { defaultProps } from "prism-react-renderer"
-import theme from "prism-react-renderer/themes/nightOwlLight"
+import "../helpers/prism.css"
 
 const LineNumber = styled.span`
   display: inline-block;
@@ -36,7 +36,7 @@ const Prism = ({ children, className }) => {
       {...defaultProps}
       code={children}
       language={language}
-      theme={theme}
+      theme={undefined}
     >
       {({ className, style, tokens, getLineProps, getTokenProps }) => {
         const multiline = tokens.length > 1

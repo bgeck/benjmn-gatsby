@@ -28,8 +28,6 @@ const LayoutDefault = ({ children, pageContext }) => {
         <Content>
           <MDXProvider
             components={{
-              // p: props => <div {...props} />,
-              // pre: props => <div {...props} />,
               code: Prism,
               inlineCode: Prism,
             }}
