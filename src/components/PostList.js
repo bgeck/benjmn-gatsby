@@ -1,6 +1,6 @@
 import React from "react"
 import styled from "styled-components"
-import { useStaticQuery, graphql } from "gatsby"
+import { useStaticQuery, graphql, Link } from "gatsby"
 
 const Wrapper = styled.div`
   display: grid;
@@ -15,6 +15,7 @@ const PostList = () => {
     query Posts {
       allMdx(filter: { frontmatter: { type: { eq: "post" } } }) {
         nodes {
+          id
           excerpt
           frontmatter {
             date
@@ -28,13 +29,13 @@ const PostList = () => {
 
   return (
     <Wrapper>
-      {data.allMdx.nodes.map(({ frontmatter, excerpt }) => (
-        <div key={frontmatter.title}>
-          <a href={frontmatter.path}>
+      {data.allMdx.nodes.map(({ frontmatter, excerpt, id }) => (
+        <div key={id}>
+          <Link to={frontmatter.path}>
             <h1>{frontmatter.title}</h1>
             <div>{excerpt}</div>
             <span>{frontmatter.date}</span>
-          </a>
+          </Link>
         </div>
       ))}
     </Wrapper>
