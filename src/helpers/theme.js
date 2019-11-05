@@ -28,11 +28,11 @@ const theme = {
 
   light: {
     colorDark: "#16161d",
-    colorLight: "#16161d",
+    colorLight: "#f7f7f7",
     background:
-      "linear-gradient(11deg,#f7f7f7 84%,#5a30304d 90%),linear-gradient(-10deg,#7c4480 84%,#3bb7ff 91%)",
+      "linear-gradient(11deg,#f7f7f7 80vw,#5a30304d 100vw),linear-gradient(-10deg,#7c4480 84vw,#3bb7ff 90vw)",
     backgroundHeader:
-      "linear-gradient(80deg, #f7f7f7 23vw, rgba(0,0,0,0) 86.5vw)",
+      "linear-gradient(80deg, #16161d 23vw, rgba(0,0,0,0) 86.5vw)",
     backgroundContent: "transparent",
     backgroundFooter: "transparent",
   },

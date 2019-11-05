@@ -9,9 +9,10 @@ const Wrapper = styled.header`
   grid-template-columns: 1fr;
   grid-gap: ${props => props.theme.padding};
   padding: ${props => props.theme.padding};
-  color: ${props => props.theme.colorDark};
+  color: ${props => props.theme.colorLight};
   background: ${props => props.theme.backgroundHeader};
   width: 100%;
+  backdrop-filter: blur(1.25px);
 `
 
 const Brand = styled.div`

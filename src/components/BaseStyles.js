@@ -6,6 +6,9 @@ const BaseStyles = createGlobalStyle`
   body {
     line-height: initial;
     background: ${props => props.theme.background};
+    background-size: 100% 90vw;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
   }
 
   p {
