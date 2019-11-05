@@ -5,6 +5,7 @@ const BaseStyles = createGlobalStyle`
   ${reset}
   body {
     line-height: initial;
+    background: ${props => props.theme.background};
   }
 
   p {

@@ -20,6 +20,7 @@ const theme = {
   dark: {
     colorDark: "#f7f7f7",
     colorLight: "#f7f7f7",
+    background: "#16161d",
     backgroundHeader: "#16161d",
     backgroundContent: "#16161d",
     backgroundFooter: "#16161d",
@@ -28,10 +29,12 @@ const theme = {
   light: {
     colorDark: "#16161d",
     colorLight: "#16161d",
+    background:
+      "linear-gradient(11deg,#f7f7f7 84%,#5a30304d 90%),linear-gradient(-10deg,#7c4480 84%,#3bb7ff 91%)",
     backgroundHeader:
-      "linear-gradient(80deg,#f7f7f7 23vw,rgba(0,0,0,0) 86.5vw)",
-    backgroundContent: "#f7f7f7",
-    backgroundFooter: "#f7f7f7",
+      "linear-gradient(80deg, #f7f7f7 23vw, rgba(0,0,0,0) 86.5vw)",
+    backgroundContent: "transparent",
+    backgroundFooter: "transparent",
   },
 
   evening: {

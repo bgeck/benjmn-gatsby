@@ -32,7 +32,7 @@ const PostList = () => {
       {data.allMdx.nodes.map(({ frontmatter, excerpt, id }) => (
         <div key={id}>
           <Link to={frontmatter.path}>
-            <h1>{frontmatter.title}</h1>
+            <h2>{frontmatter.title}</h2>
             <div>{excerpt}</div>
             <span>{frontmatter.date}</span>
           </Link>

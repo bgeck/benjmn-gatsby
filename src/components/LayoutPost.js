@@ -15,7 +15,6 @@ const Wrapper = styled.div`
   font-family: ${theme.common.font};
   letter-spacing: ${theme.common.letterSpacing};
   color: ${props => props.theme.colorDark};
-  background: ${props => props.theme.backgroundContent};
 `
 
 const LayoutPost = ({ children, pageContext }) => {

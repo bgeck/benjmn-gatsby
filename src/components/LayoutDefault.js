@@ -7,6 +7,7 @@ import Content from "./Content"
 import Footer from "./Footer"
 import Seo from "./Seo"
 import BaseStyles from "./BaseStyles"
+import Filters from "./Filters"
 
 const Wrapper = styled.div`
   min-height: 100vh;
@@ -15,7 +16,6 @@ const Wrapper = styled.div`
   font-family: ${theme.common.font};
   letter-spacing: ${theme.common.letterSpacing};
   color: ${props => props.theme.colorDark};
-  background: ${props => props.theme.backgroundContent};
 `
 
 const LayoutDefault = ({ children, pageContext }) => {
@@ -23,6 +23,7 @@ const LayoutDefault = ({ children, pageContext }) => {
     <ThemeProvider theme={Object.assign({}, theme.common, theme.light)}>
       <Seo title={pageContext.frontmatter.title} />
       <BaseStyles />
+      <Filters />
       <Wrapper>
         <Header />
         <Content>{children}</Content>
