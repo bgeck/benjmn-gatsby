@@ -16,19 +16,11 @@ const PostList = () => {
       allMdx(filter: { frontmatter: { type: { eq: "post" } } }) {
         nodes {
           excerpt
-          timeToRead
-          wordCount {
-            paragraphs
-            sentences
-            words
-          }
           frontmatter {
             date
             title
             path
-            type
           }
-          tableOfContents
         }
       }
     }
