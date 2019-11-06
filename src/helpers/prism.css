@@ -5,7 +5,7 @@
  */
 
 .prism-code {
-  background: linear-gradient(80deg, #ffffff 23vw, rgba(0, 0, 0, 0) 86.5vw);
+  background: linear-gradient(80deg, #ffffff 0vw, rgba(255, 255, 255, 0) 45vw);
 }
 
 code[class*="language-"],
@@ -113,7 +113,7 @@ pre[class*="language-"] {
 .language-css .token.string,
 .style .token.string {
   color: #a67f59;
-  background: hsla(0, 0%, 100%, 0.5);
+  background: none;
 }
 
 .token.atrule,

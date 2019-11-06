@@ -20,6 +20,11 @@ const BaseStyles = createGlobalStyle`
     flex-wrap: nowrap;
     overflow-x: auto;
     white-space: normal;
+    -webkit-overflow-scrolling: touch;
+    
+    &::-webkit-scrollbar {
+      display: none;
+    }
   }
 
   h1 {

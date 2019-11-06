@@ -19,10 +19,15 @@ const Pre = styled.span`
   flex-wrap: nowrap;
   overflow-x: auto;
   white-space: normal;
+  -webkit-overflow-scrolling: touch;
+
+  &::-webkit-scrollbar {
+    display: none;
+  }
 
   &.multi-line {
     display: block;
-    flex: 0 0 auto;
+    flex: 1 0 auto;
   }
 
   & .token-line {
@@ -33,7 +38,7 @@ const Pre = styled.span`
 
 const Line = styled.span`
   display: block;
-  flex: 0 0 auto;
+  flex: 1 0 auto;
 `
 
 const Prism = ({ children, className }) => {
