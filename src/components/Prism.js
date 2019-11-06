@@ -15,8 +15,15 @@ const Pre = styled.span`
   text-align: left;
   margin: 1em 0;
   padding: 0.5em;
-  white-space: pre;
-  display: block;
+  display: flex;
+  flex-wrap: nowrap;
+  overflow-x: auto;
+  white-space: normal;
+
+  &.multi-line {
+    display: block;
+    flex: 0 0 auto;
+  }
 
   & .token-line {
     line-height: 1.3em;
@@ -26,6 +33,7 @@ const Pre = styled.span`
 
 const Line = styled.span`
   display: block;
+  flex: 0 0 auto;
 `
 
 const Prism = ({ children, className }) => {
@@ -44,7 +52,7 @@ const Prism = ({ children, className }) => {
 
         return (
           <Pre
-            className={`${className}`}
+            className={`${className} ${multiline ? "multi-line" : ""}`}
             style={{ ...style, padding: "0.655rem" }}
           >
             {tokens.map((line, i) => (

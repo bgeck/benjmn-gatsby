@@ -15,6 +15,13 @@ const BaseStyles = createGlobalStyle`
     margin: 0.75rem 0;
   }
 
+  pre {
+    display: flex;
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    white-space: normal;
+  }
+
   h1 {
     font-size: ${props => props.theme.fontH1};
     font-weight: bold;

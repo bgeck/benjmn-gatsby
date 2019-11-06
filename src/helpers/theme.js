@@ -30,7 +30,7 @@ const theme = {
     colorDark: "#16161d",
     colorLight: "#f7f7f7",
     background:
-      "linear-gradient(11deg,#f7f7f7 80vw,#5a30304d 100vw),linear-gradient(-10deg,#7c4480 84vw,#3bb7ff 90vw)",
+      "linear-gradient(11deg,#f7f7f7 80vw,#5a30304d 100vw),linear-gradient(-10deg,#7c4480 84vw,#3bb7ff 90vw) #f7f7f7",
     backgroundHeader:
       "linear-gradient(80deg,#f6ffe06b 13vw,rgba(0,0,0,0) 86.5vw)",
     backgroundContent: "transparent",
