@@ -6,6 +6,7 @@ import { Link } from "gatsby"
 const Wrapper = styled.header`
   display: grid;
   position: fixed;
+  z-index: 1;
   grid-template-columns: auto 1fr;
   align-items: baseline;
   grid-gap: 1.06rem;

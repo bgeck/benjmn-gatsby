@@ -36,12 +36,34 @@ module.exports = {
     {
       resolve: `gatsby-plugin-mdx`,
       options: {
+        gatsbyRemarkPlugins: [
+          {
+            resolve: `gatsby-remark-images`,
+            options: {
+              maxWidth: 768,
+              disableBgImageOnAlpha: true,
+              backgroundColor: "none",
+              withWebp: true,
+              tracedSVG: true,
+            },
+          },
+        ],
         defaultLayouts: {
           posts: require.resolve("./src/components/LayoutPost.js"),
           default: require.resolve("./src/components/LayoutDefault.js"),
         },
       },
     },
+    {
+      resolve: `gatsby-remark-images`,
+      options: {
+        maxWidth: 768,
+        disableBgImageOnAlpha: true,
+        backgroundColor: "none",
+        withWebp: true,
+        tracedSVG: true,
+      },
+    }, //https://github.com/gatsbyjs/gatsby/issues/16712
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
     {
