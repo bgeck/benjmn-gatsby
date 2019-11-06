@@ -20,7 +20,13 @@ const Wrapper = styled.div`
 
 const LayoutDefault = ({ children, pageContext }) => {
   return (
-    <ThemeProvider theme={Object.assign({}, theme.common, theme.light)}>
+    <ThemeProvider
+      theme={Object.assign(
+        { columns: pageContext.frontmatter.columns },
+        theme.common,
+        theme.light
+      )}
+    >
       <Seo title={pageContext.frontmatter.title} />
       <BaseStyles />
       <Wrapper>

@@ -17,6 +17,18 @@ const Wrapper = styled.section`
 `
 const Article = styled.article`
   line-height: 1.4;
+
+  @media screen and (min-width: 576px) {
+    column-count: ${props => props.theme.columns - 2 || 1};
+  }
+
+  @media screen and (min-width: 768px) {
+    column-count: ${props => props.theme.columns - 1 || 1};
+  }
+
+  @media screen and (min-width: 992px) {
+    column-count: ${props => props.theme.columns};
+  }
 `
 
 const Content = ({ children }) => (
