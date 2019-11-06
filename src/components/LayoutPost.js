@@ -42,6 +42,7 @@ const LayoutPost = ({ children, pageContext }) => {
             {children}
           </MDXProvider>
         </Content>
+        <hr />
         <PostList />
         <Footer />
       </Wrapper>

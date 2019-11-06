@@ -25,12 +25,7 @@ const Brand = styled.div`
   font-kerning: none;
 `
 
-const Menu = styled.div`
-  letter-spacing: -0.75px;
-  font-weight: bolder;
-  font-size: 1.2rem;
-  font-kerning: none;
-
+const Menu = styled.h3`
   a + a {
     margin-left: ${props => props.theme.padding};
   }

@@ -14,11 +14,14 @@ const theme = {
     fontH2: "1.5rem",
     fontH3: "1.25rem",
     fontH4: "1rem",
+    fontH5: "1rem",
+    fontH6: "1rem",
     fontSmall: "0.68rem",
   },
 
   dark: {
     colorDark: "#f7f7f7",
+    colorMid: "#d5d5d6",
     colorLight: "#f7f7f7",
     background: "#16161d",
     backgroundHeader: "#16161d",
@@ -28,6 +31,7 @@ const theme = {
 
   light: {
     colorDark: "#16161d",
+    colorMid: "#d5d5d6",
     colorLight: "#f7f7f7",
     background:
       "linear-gradient(11deg,#f7f7f7 80vw,#5a30304d 100vw),linear-gradient(-10deg,#7c4480 84vw,#3bb7ff 90vw) #f7f7f7",
@@ -39,6 +43,7 @@ const theme = {
 
   evening: {
     colorDark: "#16161d",
+    colorMid: "#d5d5d6",
     colorLight: "#fff",
     backgroundHeader:
       "linear-gradient(80deg, rgba(163, 200, 255, .86), rgba(217, 95, 115, .76), rgba(101, 53, 119, .86))",
