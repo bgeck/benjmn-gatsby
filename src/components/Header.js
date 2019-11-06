@@ -1,7 +1,6 @@
 import React from "react"
 import styled from "styled-components"
 import { Link } from "gatsby"
-// import Menu from "./menu"
 
 const Wrapper = styled.header`
   display: grid;
@@ -41,7 +40,6 @@ const Header = () => (
       <Link to={"/posts"}>Posts</Link>
       <Link to={"/"}>Contact</Link>
     </Menu>
-    {/* <Menu align="right" /> */}
   </Wrapper>
 )
 
