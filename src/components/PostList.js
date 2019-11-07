@@ -1,6 +1,7 @@
 import React from "react"
 import styled from "styled-components"
 import { useStaticQuery, graphql, Link } from "gatsby"
+import Img from "gatsby-image"
 
 const Wrapper = styled.div`
   display: grid;
@@ -22,6 +23,13 @@ const PostList = () => {
             date
             title
             path
+            featuredImage {
+              childImageSharp {
+                fluid(maxWidth: 800) {
+                  ...GatsbyImageSharpFluid_withWebp_tracedSVG
+                }
+              }
+            }
           }
         }
       }
@@ -35,6 +43,9 @@ const PostList = () => {
           <Link to={frontmatter.path}>
             <h2>{frontmatter.title}</h2>
             <h6>{frontmatter.date}</h6>
+            {frontmatter.featuredImage && (
+              <Img fluid={frontmatter.featuredImage.childImageSharp.fluid} />
+            )}
             <div>{excerpt}</div>
           </Link>
         </div>
