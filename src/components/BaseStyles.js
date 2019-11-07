@@ -87,6 +87,10 @@ const BaseStyles = createGlobalStyle`
     float: right;
     margin: 0.45rem 0 0.665rem 1.365rem;
   }
+
+  .hero {
+    margin: -1.245rem -1.245rem 1.665rem;
+  }
 `
 
 export default BaseStyles

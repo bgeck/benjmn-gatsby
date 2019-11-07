@@ -10,10 +10,6 @@ const Wrapper = styled.section`
   color: ${props => props.theme.colorDark};
   background: ${props => props.theme.backgroundContent};
   width: 100%;
-
-  @media screen and (min-width: 576px) {
-    padding: 5.095rem 1.245rem 0.93rem;
-  }
 `
 const Article = styled.article`
   line-height: 1.4;
