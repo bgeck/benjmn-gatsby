@@ -38,7 +38,7 @@ const Header = () => (
 
     <Menu>
       <Link to={"/posts"}>Posts</Link>
-      <Link to={"/"}>Contact</Link>
+      <a href={"/contact"}>Contact</a>
     </Menu>
   </Wrapper>
 )
