@@ -76,20 +76,22 @@ const BaseStyles = createGlobalStyle`
     margin: 0.665rem 0 1.665rem;
   }
 
-  .inline-left {
-    width: 50%;
-    float: left;
-    margin: 0.45rem 1.365rem 0.665rem 0;
-  }
-
-  .inline-right {
-    width: 50%;
-    float: right;
-    margin: 0.45rem 0 0.665rem 1.365rem;
-  }
-
   .hero {
     margin: -1.245rem -1.245rem 1.665rem;
+  }
+
+  @media screen and (min-width: 576px) {
+    .inline-left {
+      width: 50%;
+      float: left;
+      margin: 0.45rem 1.365rem 0.665rem 0;
+    }
+
+    .inline-right {
+      width: 50%;
+      float: right;
+      margin: 0.45rem 0 0.665rem 1.365rem;
+    }
   }
 `
 
