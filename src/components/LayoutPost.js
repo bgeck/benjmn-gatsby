@@ -1,4 +1,4 @@
-import React from "react"
+import React, { Fragment } from "react"
 import styled, { ThemeProvider } from "styled-components"
 import { MDXProvider } from "@mdx-js/react"
 import theme from "../helpers/theme"
@@ -32,18 +32,26 @@ const LayoutPost = ({ children, pageContext }) => {
       <BaseStyles />
       <Wrapper>
         <Header />
-        <Content>
-          <MDXProvider
-            components={{
-              code: Prism,
-              inlineCode: Prism,
-            }}
-          >
-            {children}
-          </MDXProvider>
-        </Content>
-        <hr />
-        <PostList />
+        {!pageContext.frontmatter.empty ? (
+          <Fragment>
+            <Content>
+              <MDXProvider
+                components={{
+                  code: Prism,
+                  inlineCode: Prism,
+                }}
+              >
+                {children}
+              </MDXProvider>
+            </Content>
+            <hr />
+            <PostList />
+          </Fragment>
+        ) : (
+          <Content posts>
+            <PostList />
+          </Content>
+        )}
         <Footer />
       </Wrapper>
     </ThemeProvider>

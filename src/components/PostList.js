@@ -12,6 +12,10 @@ const Wrapper = styled.div`
   line-height: 1.4;
 `
 
+const ImageWrapper = styled.div`
+  margin: 0.665rem 0;
+`
+
 const PostList = () => {
   const data = useStaticQuery(graphql`
     query Posts {
@@ -44,7 +48,9 @@ const PostList = () => {
             <h2>{frontmatter.title}</h2>
             <h6>{frontmatter.date}</h6>
             {frontmatter.featuredImage && (
-              <Img fluid={frontmatter.featuredImage.childImageSharp.fluid} />
+              <ImageWrapper>
+                <Img fluid={frontmatter.featuredImage.childImageSharp.fluid} />
+              </ImageWrapper>
             )}
             <div>{excerpt}</div>
           </Link>
