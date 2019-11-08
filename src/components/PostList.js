@@ -5,10 +5,10 @@ import Img from "gatsby-image"
 
 const Wrapper = styled.div`
   display: grid;
-  grid-column-gap: ${props => (props.recent ? "3.245rem" : "1.245rem")};
+  grid-column-gap: ${props => (props.filter ? "3.245rem" : "1.245rem")};
   grid-row-gap: 0.665rem;
   grid-template-columns: ${props =>
-    props.recent
+    props.filter
       ? "repeat(auto-fill, minmax(250px, 1fr))"
       : "repeat(auto-fit, minmax(200px, 1fr))"};
   padding: 0 1.245rem;
@@ -49,6 +49,15 @@ const posts = graphql`
       ...PostFragment
     }
 
+    featured: allMdx(
+      filter: {
+        frontmatter: { type: { eq: "post" }, featuredPost: { eq: true } }
+      }
+      sort: { fields: frontmatter___date, order: DESC }
+    ) {
+      ...PostFragment
+    }
+
     recent: allMdx(
       filter: { frontmatter: { type: { eq: "post" }, date: { gte: "2019" } } }
       sort: { fields: frontmatter___date, order: DESC }
@@ -58,13 +67,18 @@ const posts = graphql`
   }
 `
 
-const PostList = ({ recent }) => {
+const getNodes = (filter, data) => {
+  if (filter === "recent") return data.recent.nodes
+  if (filter === "featured") return data.featured.nodes
+  return data.all.nodes
+}
+
+const PostList = ({ filter }) => {
   const data = useStaticQuery(posts)
-  const nodeList = recent ? data.recent.nodes : data.all.nodes
 
   return (
-    <Wrapper recent={recent}>
-      {nodeList.map(({ frontmatter, excerpt, id }) => (
+    <Wrapper filter={filter}>
+      {getNodes(filter, data).map(({ frontmatter, excerpt, id }) => (
         <div key={id}>
           <Link to={frontmatter.path}>
             <h2>{frontmatter.title}</h2>
