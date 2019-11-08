@@ -14,6 +14,12 @@ const Wrapper = styled.header`
   background: ${props => props.theme.backgroundHeader};
   width: 100%;
   backdrop-filter: blur(10.25px) url(#filter);
+
+  &.home-light {
+    @media screen and (min-width: 576px) {
+      color: ${props => props.theme.colorLight};
+    }
+  }
 `
 
 const Brand = styled.div`

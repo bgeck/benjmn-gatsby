@@ -13,6 +13,9 @@ const Wrapper = styled.section`
 
   &.posts {
     padding: 4.595rem 0 0.93rem;
+  }
+
+  &.alignStart {
     align-items: start;
   }
 `
@@ -32,8 +35,8 @@ const Article = styled.article`
   }
 `
 
-const Content = ({ children, posts }) => (
-  <Wrapper className={posts && "posts"}>
+const Content = ({ children, posts, alignStart }) => (
+  <Wrapper className={`${posts && "posts"} ${alignStart && "alignStart"}`}>
     <Article>{children}</Article>
   </Wrapper>
 )

@@ -48,7 +48,7 @@ const LayoutPost = ({ children, pageContext }) => {
             <PostList />
           </Fragment>
         ) : (
-          <Content posts>
+          <Content posts alignStart>
             <MDXProvider
               components={{
                 code: Prism,
