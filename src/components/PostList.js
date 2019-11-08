@@ -47,9 +47,7 @@ const posts = graphql`
     }
 
     recent: allMdx(
-      filter: {
-        frontmatter: { type: { eq: "post" }, date: { gte: "2018-06-01" } }
-      }
+      filter: { frontmatter: { type: { eq: "post" }, date: { gte: "2019" } } }
       sort: { fields: frontmatter___date, order: DESC }
     ) {
       ...PostFragment
@@ -59,15 +57,15 @@ const posts = graphql`
 
 const PostList = ({ recent }) => {
   const data = useStaticQuery(posts)
-  const postList = recent ? data.recent.nodes : data.all.nodes
+  const nodeList = recent ? data.recent.nodes : data.all.nodes
 
   return (
     <Wrapper>
-      {postList.map(({ frontmatter, excerpt, id }) => (
+      {nodeList.map(({ frontmatter, excerpt, id }) => (
         <div key={id}>
           <Link to={frontmatter.path}>
             <h2>{frontmatter.title}</h2>
-            <h6>{frontmatter.date}</h6>
+            <h6>{new Date(frontmatter.date).getFullYear()}</h6>
             {frontmatter.featuredImage && (
               <ImageWrapper>
                 <Img fluid={frontmatter.featuredImage.childImageSharp.fluid} />
