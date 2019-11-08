@@ -19,7 +19,10 @@ const ImageWrapper = styled.div`
 const PostList = () => {
   const data = useStaticQuery(graphql`
     query Posts {
-      allMdx(filter: { frontmatter: { type: { eq: "post" } } }) {
+      allMdx(
+        filter: { frontmatter: { type: { eq: "post" } } }
+        sort: { fields: frontmatter___date, order: DESC }
+      ) {
         nodes {
           id
           excerpt

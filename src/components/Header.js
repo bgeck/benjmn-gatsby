@@ -13,7 +13,7 @@ const Wrapper = styled.header`
   color: ${props => props.theme.colorDark};
   background: ${props => props.theme.backgroundHeader};
   width: 100%;
-  backdrop-filter: blur(10.25px);
+  backdrop-filter: blur(10.25px) url(#filter);
 `
 
 const Brand = styled.div`
@@ -32,6 +32,18 @@ const Menu = styled.h3`
 
 const Header = () => (
   <Wrapper>
+    <svg style={{ display: "none" }}>
+      <filter id="filter" x="0" y="0" width="100%" height="100%">
+        <feTurbulence
+          id="turbulence"
+          numOctaves="3"
+          seed="2"
+          baseFrequency="0.02 0.05"
+        ></feTurbulence>
+        <feDisplacementMap scale="20" in="SourceGraphic"></feDisplacementMap>
+      </filter>
+    </svg>
+
     <Link to={"/"}>
       <Brand>Benjamin Geck</Brand>
     </Link>
