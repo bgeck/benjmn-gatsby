@@ -16,36 +16,54 @@ const ImageWrapper = styled.div`
   margin: 0.665rem 0;
 `
 
-const PostList = () => {
-  const data = useStaticQuery(graphql`
-    query Posts {
-      allMdx(
-        filter: { frontmatter: { type: { eq: "post" } } }
-        sort: { fields: frontmatter___date, order: DESC }
-      ) {
-        nodes {
-          id
-          excerpt
-          frontmatter {
-            date
-            title
-            path
-            featuredImage {
-              childImageSharp {
-                fluid(maxWidth: 800) {
-                  ...GatsbyImageSharpFluid_withWebp_tracedSVG
-                }
-              }
+export const postFragment = graphql`
+  fragment PostFragment on MdxConnection {
+    nodes {
+      id
+      excerpt
+      frontmatter {
+        date
+        title
+        path
+        featuredImage {
+          childImageSharp {
+            fluid(maxWidth: 800) {
+              ...GatsbyImageSharpFluid_withWebp_tracedSVG
             }
           }
         }
       }
     }
-  `)
+  }
+`
+
+const posts = graphql`
+  query Posts {
+    all: allMdx(
+      filter: { frontmatter: { type: { eq: "post" } } }
+      sort: { fields: frontmatter___date, order: DESC }
+    ) {
+      ...PostFragment
+    }
+
+    recent: allMdx(
+      filter: {
+        frontmatter: { type: { eq: "post" }, date: { gte: "2018-06-01" } }
+      }
+      sort: { fields: frontmatter___date, order: DESC }
+    ) {
+      ...PostFragment
+    }
+  }
+`
+
+const PostList = ({ recent }) => {
+  const data = useStaticQuery(posts)
+  const postList = recent ? data.recent.nodes : data.all.nodes
 
   return (
     <Wrapper>
-      {data.allMdx.nodes.map(({ frontmatter, excerpt, id }) => (
+      {postList.map(({ frontmatter, excerpt, id }) => (
         <div key={id}>
           <Link to={frontmatter.path}>
             <h2>{frontmatter.title}</h2>

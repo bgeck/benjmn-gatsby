@@ -81,7 +81,7 @@ const LayoutHome = ({ children, pageContext }) => {
             {children}
           </MDXProvider>
         </Content>
-        <PostList />
+        <PostList recent />
         <Footer />
       </Wrapper>
     </ThemeProvider>
