@@ -31,42 +31,36 @@ const BaseStyles = createGlobalStyle`
     font-size: ${props => props.theme.fontH1};
     font-weight: bolder;
     letter-spacing: -1.2px;
-    font-kerning: none;
   }
 
   h2 {
     font-size: ${props => props.theme.fontH2};
     font-weight: bolder;
     letter-spacing: -1.2px;
-    font-kerning: none;
   }
 
   h3 {
     font-size: ${props => props.theme.fontH3};
     font-weight: bolder;
     letter-spacing: -1px;
-    font-kerning: none;
   }
 
   h4 {
     font-size: ${props => props.theme.fontH4};
     font-weight: bolder;
     letter-spacing: -1px;
-    font-kerning: none;
   }
 
   h5 {
     font-size: ${props => props.theme.fontH5};
     font-weight: normal;
     letter-spacing: -1px;
-    font-kerning: none;
   }
 
   h6 {
     font-size: ${props => props.theme.fontH6};
     font-weight: lighter;
     letter-spacing: -1px;
-    font-kerning: none;
   }
 
   hr {

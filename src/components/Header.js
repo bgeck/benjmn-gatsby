@@ -27,7 +27,6 @@ const Brand = styled.div`
   font-weight: lighter;
   margin-top: 0.22rem;
   letter-spacing: -1.5px;
-  font-kerning: none;
 `
 
 const Menu = styled.h3`
