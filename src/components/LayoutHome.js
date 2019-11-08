@@ -3,6 +3,7 @@ import styled, { ThemeProvider } from "styled-components"
 import { MDXProvider } from "@mdx-js/react"
 import theme from "../helpers/theme"
 import Header from "./Header"
+import PostList from "./PostList"
 import Content from "./Content"
 import Footer from "./Footer"
 import Prism from "./Prism"
@@ -80,6 +81,7 @@ const LayoutHome = ({ children, pageContext }) => {
             {children}
           </MDXProvider>
         </Content>
+        <PostList />
         <Footer />
       </Wrapper>
     </ThemeProvider>

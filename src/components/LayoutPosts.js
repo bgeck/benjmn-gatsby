@@ -19,7 +19,7 @@ const Wrapper = styled.div`
   color: ${props => props.theme.colorDark};
 `
 
-const LayoutPost = ({ children, pageContext }) => {
+const LayoutPosts = ({ children, pageContext }) => {
   return (
     <ThemeProvider
       theme={Object.assign(
@@ -32,7 +32,7 @@ const LayoutPost = ({ children, pageContext }) => {
       <BaseStyles />
       <Wrapper>
         <Header />
-        <Content>
+        <Content posts alignStart>
           <MDXProvider
             components={{
               code: Prism,
@@ -41,13 +41,12 @@ const LayoutPost = ({ children, pageContext }) => {
           >
             {children}
           </MDXProvider>
+          <PostList />
         </Content>
-        <hr />
-        <PostList />
         <Footer />
       </Wrapper>
     </ThemeProvider>
   )
 }
 
-export default LayoutPost
+export default LayoutPosts
