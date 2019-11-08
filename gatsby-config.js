@@ -45,7 +45,7 @@ module.exports = {
               backgroundColor: "none",
               withWebp: true,
               tracedSVG: true,
-              quality: 85,
+              quality: 75,
             },
           },
         ],
@@ -63,7 +63,7 @@ module.exports = {
         backgroundColor: "none",
         withWebp: true,
         tracedSVG: true,
-        quality: 85,
+        quality: 75,
       },
     }, //https://github.com/gatsbyjs/gatsby/issues/16712
     `gatsby-transformer-sharp`,

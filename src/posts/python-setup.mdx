@@ -2,12 +2,10 @@
 type: post
 title: "My Python setup for Mac OSX"
 path: "/python-setup"
-date: "2018-09-01"
+date: "09-01-2018"
 columns: 2
 tags: ["python", "code"]
 ---
-
-## The Goal
 
 I recently started diving into machine learning and in particular how I can use some of the new work in the field of style transfer to make cool pictures! I love cool pictures!
 
@@ -15,21 +13,21 @@ Anyway, I come from a Javascript background and in particular a **Node.js / NPM*
 
 As I started looking into machine learning, I realized that a lot of the really high-quality work being done on this front is done in Python. I haven't worked with Python a ton, but am always looking to grow my general coding skills so I went about figuring out how to have the same type of tooling setup as I do in Javascript based projects.
 
-## What I Figured Out
+# What I Figured Out
 
 The main thing I learned, in my quest for a nice clean "package system" for Python was that Python has a similar system to packages using virtual environments to separate project code.
 
 After setting this up you can create specific virtual environments that have their own set of libraries installed for just that environment, and then define in the project which environment to use. You can also create a _requirements.txt_ file that works very similarly to _package.json_ and lets you define libraries to be installed as dependencies for a project and install them with a few simple commands.
 
-## My Setup
+# My Setup
 
 I use Visual studio code to do most coding these days. It's got all kinds of great tools for improving the quality and organization of your code.
 
-### Tool 1: Visual Studio Code Command Line
+## Tool 1: Visual Studio Code Command Line
 
 After installation, launch VS Code. Then open the Command Palette (F1 or ⇧⌘P on Mac) and type shell command to find the _Shell Command: Install 'code' command in PATH_ command.
 
-### Tool 2: Homebrew
+## Tool 2: Homebrew
 
 For me on a Mac, Homebrew is a must have tool for coding. Standing on the shoulders of giants, I don't have to figufe out how to port things from linux manually. Getting most common programming tools is as easy as
 
@@ -37,7 +35,7 @@ For me on a Mac, Homebrew is a must have tool for coding. Standing on the should
 brew install [a thing]
 ```
 
-### Tool 3: Fish Shell with Oh My Fish! extension
+## Tool 3: Fish Shell with Oh My Fish! extension
 
 I use the Fish shell instead of Bash because it brings more joy into my life to see the little fish at the prompt! Also it has some nice autocompletion features and history bits that are nice and time-saving.
 
@@ -48,7 +46,7 @@ curl -L https://get.oh-my.fish | fish
 
 Ok, now on to the meat and potatoes! After the tools were installed, this is how I setup Python.
 
-#### Install pyenv
+### Install pyenv
 
 ```bash
 brew install pyenv
@@ -56,7 +54,7 @@ brew install pyenv-virtualenv
 code ~/.config/fish/config.fish
 ```
 
-#### Add some lines to config.fish
+### Add some lines to config.fish
 
 ```bash
 export PATH="/usr/local/sbin:$PATH"
@@ -67,7 +65,7 @@ status --is-interactive; and source (pyenv virtualenv-init -|psub)
 
 And that's about it. Now with some simple commands you can do all the things! The main commands to remember are as follows:
 
-## New super powers!
+# New super powers!
 
 Install a version of Python you want to use.
 
