@@ -40,12 +40,12 @@ module.exports = {
           {
             resolve: `gatsby-remark-images`,
             options: {
-              maxWidth: 800,
+              maxWidth: 992,
               disableBgImageOnAlpha: true,
               backgroundColor: "none",
               withWebp: true,
               tracedSVG: true,
-              quality: 75,
+              quality: 77,
             },
           },
         ],
@@ -58,12 +58,12 @@ module.exports = {
     {
       resolve: `gatsby-remark-images`,
       options: {
-        maxWidth: 800,
+        maxWidth: 992,
         disableBgImageOnAlpha: true,
         backgroundColor: "none",
         withWebp: true,
         tracedSVG: true,
-        quality: 75,
+        quality: 77,
       },
     }, //https://github.com/gatsbyjs/gatsby/issues/16712
     `gatsby-transformer-sharp`,
