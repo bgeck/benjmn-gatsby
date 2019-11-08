@@ -56,6 +56,12 @@ const Wrapper = styled.div`
   .hero > span {
     max-width: 100% !important;
   }
+
+  .skills {
+    display: grid;
+    grid-gap: 3.245rem;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  }
 `
 
 const LayoutHome = ({ children, pageContext }) => {

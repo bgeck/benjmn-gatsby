@@ -5,9 +5,12 @@ import Img from "gatsby-image"
 
 const Wrapper = styled.div`
   display: grid;
-  grid-column-gap: 1.245rem;
+  grid-column-gap: ${props => (props.recent ? "3.245rem" : "1.245rem")};
   grid-row-gap: 0.665rem;
-  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  grid-template-columns: ${props =>
+    props.recent
+      ? "repeat(auto-fill, minmax(250px, 1fr))"
+      : "repeat(auto-fit, minmax(200px, 1fr))"};
   padding: 0 1.245rem;
   line-height: 1.4;
 `
@@ -60,7 +63,7 @@ const PostList = ({ recent }) => {
   const nodeList = recent ? data.recent.nodes : data.all.nodes
 
   return (
-    <Wrapper>
+    <Wrapper recent={recent}>
       {nodeList.map(({ frontmatter, excerpt, id }) => (
         <div key={id}>
           <Link to={frontmatter.path}>
