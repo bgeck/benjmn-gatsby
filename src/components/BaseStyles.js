@@ -25,6 +25,7 @@ const BaseStyles = createGlobalStyle`
     overflow-x: auto;
     white-space: normal;
     -webkit-overflow-scrolling: touch;
+    page-break-inside: avoid;
 
     &::-webkit-scrollbar {
       display: none;

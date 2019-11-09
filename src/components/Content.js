@@ -21,6 +21,9 @@ const Wrapper = styled.section`
 `
 const Article = styled.article`
   line-height: 1.4;
+  column-rule: 1px solid;
+  column-rule-color: ${props => props.theme.colorMid};
+  column-gap: 3.5rem;
 
   @media screen and (min-width: 576px) {
     column-count: ${props => props.theme.columns - 2 || 1};
