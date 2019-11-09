@@ -8,7 +8,7 @@ const theme = {
     /**
      * Typography
      */
-    font: "sans-serif",
+    font: "IBM Plex Sans",
     letterSpacing: "0.0063rem",
     fontH1: "2rem",
     fontH2: "1.5rem",

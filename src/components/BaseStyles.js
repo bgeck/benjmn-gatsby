@@ -1,5 +1,6 @@
 import { createGlobalStyle } from "styled-components"
 import reset from "styled-reset-advanced"
+import theme from "../helpers/theme"
 
 const BaseStyles = createGlobalStyle`
   ${reset}
@@ -9,6 +10,9 @@ const BaseStyles = createGlobalStyle`
     background-size: 100% 90vw;
     background-repeat: no-repeat;
     background-attachment: fixed;
+    font-family: ${theme.common.font};
+    /* letter-spacing: ${theme.common.letterSpacing}; */
+    color: ${props => props.theme.colorDark};
   }
 
   p {

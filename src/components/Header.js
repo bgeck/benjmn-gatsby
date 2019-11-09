@@ -24,8 +24,7 @@ const Wrapper = styled.header`
 
 const Brand = styled.div`
   font-size: 1.5rem;
-  font-weight: lighter;
-  margin-top: 0.22rem;
+  font-weight: 300;
   letter-spacing: -1.5px;
 `
 

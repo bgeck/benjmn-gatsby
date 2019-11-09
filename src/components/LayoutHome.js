@@ -14,9 +14,6 @@ const Wrapper = styled.div`
   min-height: 100vh;
   display: grid;
   grid-template-rows: 1fr auto;
-  font-family: ${theme.common.font};
-  letter-spacing: ${theme.common.letterSpacing};
-  color: ${props => props.theme.colorDark};
 
   .callout {
     position: relative;
@@ -45,6 +42,7 @@ const Wrapper = styled.div`
 
     h1 {
       font-size: 5vmax;
+      font-weight: 200;
     }
 
     h2 {
