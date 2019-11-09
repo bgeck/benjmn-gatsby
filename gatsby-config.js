@@ -39,12 +39,7 @@ module.exports = {
         fonts: [
           {
             family: `IBM Plex Sans`,
-            variants: [
-              "200",
-              "300",
-              "400",
-              "700",
-            ],
+            variants: ["200", "300", "400", "700"],
           },
         ],
       },

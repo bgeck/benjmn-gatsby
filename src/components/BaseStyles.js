@@ -36,6 +36,7 @@ const BaseStyles = createGlobalStyle`
     font-size: ${props => props.theme.fontH1};
     font-weight: bolder;
     letter-spacing: -1.2px;
+    margin: 0.665rem 0;
   }
 
   h2 {
@@ -73,6 +74,13 @@ const BaseStyles = createGlobalStyle`
     border-top-color: ${props => props.theme.colorMid};
     width: 100%;
     margin: 0.665rem 0 1.665rem;
+  }
+
+  blockquote {
+    border-left: 8px solid;
+    border-left-color: ${props => props.theme.colorMid};
+    background: ${props => props.theme.colorLight};
+    padding: 0.665rem;
   }
 
   .hero {

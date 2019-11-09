@@ -8,6 +8,7 @@ const Wrapper = styled.div`
   overflow: hidden;
   max-width: 100%;
   background: ${props => props.theme.colorLight};
+  margin: 1.245rem 0;
 `
 
 const VideoFrame = styled.iframe`
