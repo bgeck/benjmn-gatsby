@@ -20,10 +20,7 @@ const BaseStyles = createGlobalStyle`
   }
 
   pre {
-    display: flex;
-    flex-wrap: nowrap;
-    overflow-x: auto;
-    white-space: normal;
+    display: grid;
     -webkit-overflow-scrolling: touch;
     page-break-inside: avoid;
 

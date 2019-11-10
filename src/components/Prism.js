@@ -11,7 +11,7 @@ const LineNumber = styled.span`
   opacity: 0.3;
 `
 
-const Pre = styled.span`
+const Pre = styled.code`
   text-align: left;
   margin: 1em 0;
   padding: 0.5em;
