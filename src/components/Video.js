@@ -9,6 +9,7 @@ const Wrapper = styled.div`
   max-width: 100%;
   background: ${props => props.theme.colorLight};
   margin: 1.245rem 0;
+  page-break-inside: avoid;
 `
 
 const VideoFrame = styled.iframe`

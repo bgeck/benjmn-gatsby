@@ -36,7 +36,7 @@ const BaseStyles = createGlobalStyle`
     font-size: ${props => props.theme.fontH1};
     font-weight: bolder;
     letter-spacing: -1.2px;
-    margin: 0.665rem 0;
+    margin: 0 0 0.665rem;
   }
 
   h2 {
@@ -85,6 +85,18 @@ const BaseStyles = createGlobalStyle`
 
   .hero {
     margin: -1.245rem -1.245rem 1.665rem;
+  }
+
+  .auto-grid {
+    display:grid;
+    margin: 0.665rem 0;
+    grid-gap: 0.665rem;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    
+    .gatsby-resp-image-wrapper {
+      width: 100%;
+      height: fit-content;
+    }
   }
 
   @media screen and (min-width: 576px) {

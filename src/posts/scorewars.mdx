@@ -6,7 +6,6 @@ featuredPost: true
 featuredImage: "../images/web/scorewars.png"
 date: 2017-11-01
 tags: ["web", "animation", "front end"]
-columns: 2
 ---
 
 import Video from "../components/Video"
@@ -19,18 +18,18 @@ ScoreWars.com is a site that I was the lead Front End developer on. It was in th
 
 One of the main challenges was how to make it feel like an actual Arcade cabinet across devices. The way we approached it was to focus on the controls of the "cabinet", and on the flickering screen / monitor. The video below shows both of these, so check it out, but its easier to see how it works by actually going to ScoreWars.com.
 
-<div>
+<div className="auto-grid">
   <img src="../images/web/scorewars.png" alt="test" />
-  <br />
   <img src="../images/web/scorewars-mobile.png" alt="test" />
-  <br />
 </div>
 
 ## The Controls
 
 Bear in mind this was in the good old days before flex and grid became super solid. Also note, this site is based on bootstrap 3 and needed to work well within that framework. I've come to rely less and less on frameworks over the years as it tends to be so much bulk and locks you into a specific moment in time. It's a bit of a hack, but ends up working out nicely.
 
-<Video type="youtube" url="FfaNMZXviR0" />
+<div className="inline-left">
+  <Video type="youtube" url="FfaNMZXviR0" />
+</div>
 
 ```less
 // Tablets and above handle the controls in one way
