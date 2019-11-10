@@ -58,7 +58,8 @@ const Wrapper = styled.div`
 
   .skills {
     display: grid;
-    grid-gap: 3.245rem;
+    grid-column-gap: 3.245rem;
+    grid-row-gap: 0.665rem;
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
   }
 `
