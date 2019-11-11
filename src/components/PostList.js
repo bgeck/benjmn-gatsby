@@ -19,6 +19,11 @@ const Item = styled.div`
   text-align: center;
 `
 
+const Tags = styled.div`
+  display: block;
+  text-transform: capitalize;
+`
+
 const ImageWrapper = styled.div`
   margin: 0.665rem 0;
 `
@@ -89,15 +94,16 @@ const PostList = ({ filter }) => {
             <h2>{frontmatter.title}</h2>
             <h5>{new Date(frontmatter.date).getFullYear()}</h5>
             {frontmatter.tags && (
-              <h6>
-                {frontmatter.tags
-                  .map(tag => {
-                    return tag
-                  })
-                  .join(", ")}
-              </h6>
+              <Tags>
+                <h6>
+                  {frontmatter.tags
+                    .map(tag => {
+                      return tag
+                    })
+                    .join(", ")}
+                </h6>
+              </Tags>
             )}
-
             {frontmatter.featuredImage ? (
               <ImageWrapper>
                 <Img fluid={frontmatter.featuredImage.childImageSharp.fluid} />
