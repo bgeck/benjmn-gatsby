@@ -15,6 +15,10 @@ const Wrapper = styled.div`
   line-height: 1.4;
 `
 
+const Item = styled.div`
+  text-align: center;
+`
+
 const ImageWrapper = styled.div`
   margin: 0.665rem 0;
 `
@@ -28,6 +32,7 @@ export const postFragment = graphql`
         date
         title
         path
+        tags
         featuredImage {
           childImageSharp {
             fluid(maxWidth: 800) {
@@ -79,18 +84,29 @@ const PostList = ({ filter }) => {
   return (
     <Wrapper filter={filter}>
       {getNodes(filter, data).map(({ frontmatter, excerpt, id }) => (
-        <div key={id}>
+        <Item key={id}>
           <Link to={frontmatter.path}>
             <h2>{frontmatter.title}</h2>
-            <h6>{new Date(frontmatter.date).getFullYear()}</h6>
-            {frontmatter.featuredImage && (
+            <h5>{new Date(frontmatter.date).getFullYear()}</h5>
+            {frontmatter.tags && (
+              <h6>
+                {frontmatter.tags
+                  .map(tag => {
+                    return tag
+                  })
+                  .join(", ")}
+              </h6>
+            )}
+
+            {frontmatter.featuredImage ? (
               <ImageWrapper>
                 <Img fluid={frontmatter.featuredImage.childImageSharp.fluid} />
               </ImageWrapper>
+            ) : (
+              <div>{excerpt}</div>
             )}
-            <div>{excerpt}</div>
           </Link>
-        </div>
+        </Item>
       ))}
     </Wrapper>
   )
