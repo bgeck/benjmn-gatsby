@@ -84,10 +84,15 @@ const BaseStyles = createGlobalStyle`
     margin: -1.245rem -1.245rem 1.665rem;
   }
 
+  .rounded, 
+  .rounded p {
+    border-radius: 1rem;
+    overflow: hidden;
+  }
+
   .auto-grid {
     display:grid;
-    margin: 0.665rem 0;
-    grid-gap: 0.665rem;
+    grid-gap: 1.665rem;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     
     .gatsby-resp-image-wrapper {
