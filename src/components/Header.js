@@ -14,23 +14,31 @@ const Wrapper = styled.header`
   background: ${props => props.theme.backgroundHeader};
   width: 100%;
   backdrop-filter: blur(10.25px) url(#filter);
-
-  &.home-light {
-    @media screen and (min-width: 576px) {
-      color: ${props => props.theme.colorLight};
-    }
-  }
 `
 
 const Brand = styled.div`
-  font-size: 1.5rem;
+  font-size: 1.25rem;
   font-weight: 300;
   letter-spacing: -1.5px;
+
+  @media screen and (min-width: 365px) {
+    font-size: 1.5rem;
+  }
 `
 
 const Menu = styled.h3`
+  font-size: 1.15rem;
+
   a + a {
-    margin-left: ${props => props.theme.padding};
+    margin-left: 0.45rem;
+  }
+
+  @media screen and (min-width: 365px) {
+    font-size: 1.25rem;
+
+    a + a {
+      margin-left: ${props => props.theme.padding};
+    }
   }
 `
 
@@ -53,8 +61,9 @@ const Header = () => (
     </Link>
 
     <Menu>
-      <Link to={"/posts"}>Posts</Link>
-      <a href={"/contact"}>Contact</a>
+      <Link to="/posts">Posts</Link>
+      <Link to="/about">About</Link>
+      <a href="/contact">Contact</a>
     </Menu>
   </Wrapper>
 )
