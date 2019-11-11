@@ -76,7 +76,7 @@ const LayoutHome = ({ children, pageContext }) => {
       <Seo title={pageContext.frontmatter.title} />
       <BaseStyles />
       <Wrapper>
-        <Header className="home-light" />
+        <Header />
         <Content alignStart>
           <MDXProvider
             components={{

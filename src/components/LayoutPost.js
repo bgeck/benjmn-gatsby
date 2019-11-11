@@ -16,11 +16,6 @@ const Wrapper = styled.div`
   grid-template-rows: 1fr auto;
 `
 
-const Tags = styled.blockquote`
-  margin: 0rem 0rem 2rem -1.245rem;
-  display: inline-block;
-`
-
 const LayoutPost = ({ children, pageContext }) => {
   return (
     <ThemeProvider
