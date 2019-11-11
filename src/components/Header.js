@@ -50,9 +50,9 @@ const Header = () => (
           id="turbulence"
           numOctaves="3"
           seed="2"
-          baseFrequency="0.02 0.05"
+          baseFrequency="0.0125 0.0125"
         ></feTurbulence>
-        <feDisplacementMap scale="20" in="SourceGraphic"></feDisplacementMap>
+        <feDisplacementMap scale="12" in="SourceGraphic"></feDisplacementMap>
       </filter>
     </svg>
 
