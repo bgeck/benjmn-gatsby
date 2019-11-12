@@ -6,7 +6,7 @@ const Wrapper = styled.footer`
   grid-template-columns: auto;
   grid-gap: ${props => props.theme.padding};
   padding: ${props => props.theme.padding};
-  color: #16161d8c;
+  color: ${props => props.theme.colorDark};
   background: ${props => props.theme.backgroundFooter};
   font-size: ${props => props.theme.fontSmall};
   text-align: center;
