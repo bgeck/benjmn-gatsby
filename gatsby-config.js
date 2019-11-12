@@ -1,7 +1,7 @@
 module.exports = {
   siteMetadata: {
     title: `Benjamin Geck`,
-    description: ``,
+    description: `Coder, Designer & Artist: Fusing technology and art into explorative experiences.`,
     author: `Benjamin Geck`,
   },
   plugins: [
@@ -89,7 +89,7 @@ module.exports = {
         background_color: `#ffffff`,
         theme_color: `#ffffff`,
         display: `minimal-ui`,
-        // icon: `src/images/gatsby-icon.png`, // This path is relative to the root of the site.
+        icon: `src/images/icon.png`, // This path is relative to the root of the site.
       },
     },
     `gatsby-plugin-styled-components`,

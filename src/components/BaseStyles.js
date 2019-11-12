@@ -101,6 +101,13 @@ const BaseStyles = createGlobalStyle`
     }
   }
 
+  @media screen and (min-width: 1400px) {
+    .fixed-width {
+      max-width: 1400px;
+      margin: 0 auto;
+    }
+  }
+
   @media screen and (min-width: 576px) {
     .inline-left {
       width: 50%;
