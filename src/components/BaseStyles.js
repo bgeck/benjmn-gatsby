@@ -19,6 +19,10 @@ const BaseStyles = createGlobalStyle`
     margin: 0.75rem 0;
   }
 
+  div > p:first-child {
+    margin: 0 0 0.75rem;
+  }
+
   pre {
     display: grid;
     -webkit-overflow-scrolling: touch;
