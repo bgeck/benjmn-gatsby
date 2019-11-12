@@ -18,6 +18,11 @@ const Wrapper = styled.section`
   &.alignStart {
     align-items: start;
   }
+
+  a {
+    color: ${props => props.theme.colorComplement};
+    text-decoration: underline;
+  }
 `
 const Article = styled.article`
   line-height: 1.4;
