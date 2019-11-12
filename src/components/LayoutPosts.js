@@ -29,7 +29,7 @@ const LayoutPosts = ({ children, pageContext }) => {
       <BaseStyles />
       <Wrapper>
         <Header />
-        <Content posts alignStart>
+        <Content>
           <MDXProvider
             components={{
               code: Prism,
@@ -38,8 +38,8 @@ const LayoutPosts = ({ children, pageContext }) => {
           >
             {children}
           </MDXProvider>
-          <PostList />
         </Content>
+        <PostList />
         <Footer />
       </Wrapper>
     </ThemeProvider>

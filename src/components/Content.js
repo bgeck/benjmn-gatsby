@@ -11,14 +11,6 @@ const Wrapper = styled.section`
   background: ${props => props.theme.backgroundContent};
   width: 100%;
 
-  &.posts {
-    padding: 4.595rem 0 0.93rem;
-  }
-
-  &.alignStart {
-    align-items: start;
-  }
-
   a {
     color: ${props => props.theme.colorComplement};
     text-decoration: underline;
@@ -43,8 +35,8 @@ const Article = styled.article`
   }
 `
 
-const Content = ({ children, posts, alignStart }) => (
-  <Wrapper className={`${posts && "posts"} ${alignStart && "alignStart"}`}>
+const Content = ({ children }) => (
+  <Wrapper>
     <Article>{children}</Article>
   </Wrapper>
 )

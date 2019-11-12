@@ -8,7 +8,7 @@ const Wrapper = styled.div`
   overflow: hidden;
   max-width: 100%;
   background: ${props => props.theme.colorLight};
-  margin: 0 0 1.245rem;
+  margin: 1.245rem 0 1.245rem;
   page-break-inside: avoid;
 `
 
