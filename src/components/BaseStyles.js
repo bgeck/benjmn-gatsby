@@ -4,6 +4,7 @@ import theme from "../helpers/theme"
 
 const BaseStyles = createGlobalStyle`
   ${reset}
+  @import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:ital,wght@0,200;0,300;0,400;0,700;1,200;1,300;1,400;1,700&display=swap');
   body {
     line-height: initial;
     background: ${props => props.theme.background};
