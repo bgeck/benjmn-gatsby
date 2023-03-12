@@ -42,7 +42,7 @@ const Wrapper = styled.div`
 
     h1 {
       font-size: 5vmax;
-      font-weight: 200;
+      font-weight: bolder;
       margin: 0;
     }
 
