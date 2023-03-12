@@ -39,7 +39,7 @@ const BaseStyles = createGlobalStyle`
 
   h2 {
     font-size: ${props => props.theme.fontH2};
-    font-weight: bolder;
+    font-weight: normal;
     letter-spacing: -1.2px;
   }
 
@@ -63,7 +63,7 @@ const BaseStyles = createGlobalStyle`
 
   h6 {
     font-size: ${props => props.theme.fontH6};
-    font-weight: lighter;
+    font-weight: light;
     letter-spacing: -1px;
   }
 
@@ -102,9 +102,9 @@ const BaseStyles = createGlobalStyle`
     }
   }
 
-  @media screen and (min-width: 1400px) {
+  @media screen and (min-width: 1024px) {
     .fixed-width {
-      max-width: 1400px;
+      max-width: 1024px;
       margin: 0 auto;
     }
   }
